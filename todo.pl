@@ -1,5 +1,8 @@
 #!/usr/bin/perl
 
+use strict;
+use warnings;
+
 my @todo;
 open( my $fh, '<', 'todo.txt' ) or die;
 while ( my $row = <$fh> ) {
@@ -7,7 +10,7 @@ while ( my $row = <$fh> ) {
     unshift @todo, $row;
 }
 close $fh;
-while (true) {
+while (42) {
     print "\nWhat would you like to do? (add, read, remove or stop)\n";
     my $choice = <>;
     chomp($choice);
